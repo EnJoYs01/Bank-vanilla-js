@@ -1,0 +1,13 @@
+.logo {
+  > a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+    text-decoration: none;
+    > img {
+      transform: translateY(5px);
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
