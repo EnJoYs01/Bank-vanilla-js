@@ -63,8 +63,8 @@ class RenderService {
   /**
    * Applying module styles to an element
    *
-   * @param {Object} styles
-   * @param {string} element
+   * @param {Object} styles - Styles object, containing styles to apply
+   * @param {string} element - HTML element to which the styles will be applied
    * @returns {void}
    */
   #applyModuleStyles(styles, element) {

@@ -30,7 +30,6 @@ export class CardService {
    * @returns {Promise} Promise object that resolves to the response from the API
    */
   updateBalance(amount, type, onSuccess) {
-    console.log(this.store.state.user);
     if (!+amount) {
       throw new Error('The wrong amount was entered. Amount must be number');
     }
@@ -70,7 +69,6 @@ export class CardService {
    * @returns {Promise} Promise object that resolves to the response from the API
    */
   transfer({ amount, toCardNumber }, onSuccess) {
-    console.log(this.store.state.user);
     return MyQuery({
       path: `${this.#BASE_URL}/transfer-money`,
       method: 'PATCH',

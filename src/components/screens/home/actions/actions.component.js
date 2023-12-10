@@ -33,6 +33,7 @@ export class Actions extends ChildComponent {
     event.preventDefault();
     if (!this.store.state.user) {
       this.notificationService.show('error', 'You must be logged in');
+      return;
     }
 
     $S(event.target).setText('Sending...').setAttr('disabled', 'true');

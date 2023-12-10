@@ -26,7 +26,6 @@ export class AuthService {
       path: `${this.#BASE_URL}/${currentType}`,
       body,
       onSuccess: data => {
-        console.log(data);
         this.store.login(data.user, data.accessToken);
 
         this.notificationService.show(
