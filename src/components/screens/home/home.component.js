@@ -17,7 +17,6 @@ import template from './home.template.html';
 export class Home extends BaseScreen {
   constructor() {
     super({ title: 'Home' });
-
     this.store = Store.getInstance();
     this.store.addObserver(this);
 
@@ -41,6 +40,7 @@ export class Home extends BaseScreen {
     this.user = this.store.state.user;
 
     if (!this.user) {
+      $S(this.element).setStyle('display', 'flex');
       $S(this.element).html(new AuthRequiredMessage().render().outerHTML);
     }
   }

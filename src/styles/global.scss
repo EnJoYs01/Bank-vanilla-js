@@ -1,5 +1,6 @@
 @import './variables';
 @import './reset';
+@import './keyframes';
 
 input,
 button,
@@ -27,7 +28,7 @@ input {
 a {
   color: $white;
   text-decoration: none;
-  transition: border-color 0.3s ease-in-out;
+  transition: border-color 1.3s ease-in-out;
   border-bottom: 1px solid transparent;
   animation: drawing 0.4s;
 
@@ -45,5 +46,3 @@ input::-webkit-inner-spin-button {
 input[type='number'] {
   -moz-appearance: textfield; /* Firefox */
 }
-
-@import './keyframes';

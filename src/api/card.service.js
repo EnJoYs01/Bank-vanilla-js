@@ -55,6 +55,7 @@ export class CardService {
             ? `Your balance has been successfully topped up by ${amount} rubles`
             : `You have successfully withdrawn ${amount} rubles from your card balance`
         );
+
         onSuccess();
       }
     });

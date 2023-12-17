@@ -9,7 +9,8 @@ export class FormService {
     const allInputsData = {};
 
     for (const input of allInputs) {
-      allInputsData[input.name] = input.value;
+      const inputName = input.name.replace(/-./g, x => x[1].toUpperCase());
+      allInputsData[inputName] = input.value;
     }
 
     return allInputsData;

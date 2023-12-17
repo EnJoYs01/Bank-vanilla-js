@@ -4,7 +4,7 @@ import { formatCardNumberWithDashes } from '@/utils/format/format-card-number';
  * Class for working with DOM elements
  */
 class SQuery {
-  #forbiddenSymbols = /^[^!@\$%^\*\(\)=_~\{\}"'`;\\?,</№]+$/;
+  #forbiddenSymbols = /^[^!@\$%^\*_~\{\};\\?,</№]+$/;
 
   /**
    * Create a new SQuery instance
@@ -100,12 +100,15 @@ class SQuery {
 
   /**
    * Inserting a new element before selected element
-   * @param {HTMLElement} element
+   * @param {HTMLElement | string} newElement
    * @returns {SQuery} current SQuery instance for next work with element
    */
   before(newElement) {
-    if (!(newElement instanceof HTMLElement)) {
-      throw new Error('Child element must be an HTMLElement');
+    if (
+      !(newElement instanceof HTMLElement) &&
+      typeof newElement !== 'string'
+    ) {
+      throw new Error('Child element must be an HTMLElement or string');
     }
 
     if (this.element.parentElement) {

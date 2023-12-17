@@ -13,7 +13,7 @@ export class AuthService {
   /**
    * Login or register user depending on the current type
    * @param {string} type - Type of operation (only login or register allowed)
-   * @param {any} body - Password and email for login or register
+   * @param {object} body - Password and email for login or register
    * @returns {Promise} Promise object that resolves to the response from the API
    */
   main(type, body) {

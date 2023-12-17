@@ -24,14 +24,15 @@ export class Auth extends BaseScreen {
   }
 
   #validateFields(formValues) {
-    const emailLabel = $S(this.element).find('label:first-child');
-    const passwordLabel = $S(this.element).find('label:last-child');
+    const authInputs = $S(this.element).find('#auth-inputs');
+    const emailInput = authInputs.find('input[name="email"]');
+    const passwordInput = $S(this.element).find('input[name="password"]');
 
     if (!formValues.email) {
-      this.validationService.showError(emailLabel);
+      this.validationService.showError(emailInput);
     }
     if (!formValues.password) {
-      this.validationService.showError(passwordLabel);
+      this.validationService.showError(passwordInput);
     }
 
     return formValues.email && formValues.password;

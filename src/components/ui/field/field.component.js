@@ -6,7 +6,14 @@ import styles from './field.module.scss';
 import template from './field.template.html';
 
 export class Field extends ChildComponent {
-  constructor({ placeholder, type = 'text', value = '', name, variant }) {
+  constructor({
+    placeholder,
+    type = 'text',
+    value = '',
+    name,
+    variant,
+    label
+  }) {
     super();
 
     if (!name) {
@@ -18,6 +25,7 @@ export class Field extends ChildComponent {
     this.value = value;
     this.name = name;
     this.variant = variant;
+    this.label = label;
   }
 
   render() {
@@ -33,6 +41,8 @@ export class Field extends ChildComponent {
     this.type === 'number' ? inputElement.numberInput() : null;
 
     this.variant === 'credit-card' ? inputElement.creditCardInput() : null;
+
+    this.label ? $S(this.element).find('input').before(this.label) : null;
 
     return this.element;
   }

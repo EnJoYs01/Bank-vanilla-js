@@ -99,4 +99,16 @@ export default class Store {
     this.state.user = newUser;
     this.storageService.setItem(USER_STORAGE_KEY, newUser);
   }
+
+  /**
+   * Update current user
+   * @param {object} newUser - New user object
+   * @returns {void}
+   */
+  updateUser(newUser) {
+    console.log('newUser');
+    console.log(newUser);
+    this.state.user = newUser;
+    this.storageService.setItem(USER_STORAGE_KEY, newUser);
+  }
 }

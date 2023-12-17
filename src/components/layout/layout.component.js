@@ -31,6 +31,7 @@ export class Layout extends ChildComponent {
           router: this.router
         }).render()
       );
+
     return this.element;
   }
 }

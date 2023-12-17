@@ -74,7 +74,7 @@ export class Actions extends ChildComponent {
       .find('#action-buttons')
       .append(
         new Button({
-          children: 'Top-up',
+          children: 'Top-Up',
           color: 'green',
           onClick: event => {
             this.updateBalance(event, 'top-up');

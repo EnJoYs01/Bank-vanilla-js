@@ -45,7 +45,6 @@ export class Search extends ChildComponent {
        * Clear the search result element for new search result
        */
       searchResultElement.replace('');
-
       /**
        * Process each received user and add it in the search result element
        */

@@ -1,8 +1,6 @@
 import { getTitle } from '@/config/seo.config';
 
 export class BaseScreen {
-  title;
-
   /**
    * Create a new BaseScreen instance
    * @param {Object} options - The options for the BaseScreen
